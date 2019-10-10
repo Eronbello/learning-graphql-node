@@ -17,3 +17,7 @@ const schema = buildSchema(`
     createUser(name: String!, repo: String!, age: Int!): User
   }
 `);
+
+const providers = {
+  users: []
+};
