@@ -44,3 +44,14 @@ const resolvers = {
     return user;
   }
 };
+
+app.use(
+  "/graphql",
+  expressGraphql({
+    schema,
+    rootValue: resolvers,
+    graphiql: true
+  })
+);
+
+app.listen(3000);
